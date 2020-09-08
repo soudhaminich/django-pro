@@ -1,0 +1,14 @@
+body{
+    text-align:center;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-fijoLYDDnekA5g_4HztyNwm--cnrxLdWHQ&usqp=CAU);
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 15px solid #000;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+   

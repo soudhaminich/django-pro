@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>HOME PAGE</title>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  
+<style>
+ul {
+  list-style-type:square;
+  margin: 0;
+  padding:0;
+}
+
+li {
+  display:inline-block;
+  width:400px;
+}
+</style>
+</head>
+<body>
+<div>
+
+<ul>
+  <li><h3><a href="index.html">Home</a></h3></li>
+
+  
+  {% if user.is_authenticated %}
+  <li><h2><b>Hello, {{user.username}} You are sucessfully logged in😀😀</b></h1></li>
+  <li><h3><a href="accounts/logout">Logout</a></h3></li>
+  <h1>HEARTY WELCOME TO THIS WEBSITE</h1>
+  
+  {% else %}
+  <li><h3><a href="accounts/register">Register</a></h3></li>
+  <li><h3><a href="accounts/login">Login</a></h3></li>
+  {% endif %}
+  
+</ul>
+</div>
+</body>
+</html>
