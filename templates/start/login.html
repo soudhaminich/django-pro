@@ -5,23 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>LOGIN PAGE</title>
 </head>
 <body>
-    <div >
-        <h1><b>LOGIN FORM</b></h1>
-        <form  style="text-align:center;"  method="POST">
-            {% csrf_token %}
-            USERNAME: <input type="text" name="username" placeholder="username"><br><br><br>
-            PASSWORD:<input type="password" name="password" placeholder="password">  <br><br><br>
-            <input type="submit"><br>   
-            
-        </form>        
+ <div class="main">
+      <div class="left">
+          <div class="right" >
+             <img src="https://dxf1.com/images/jdownloads/screenshots/login-door.png" width="250px" height="400px">
+        </div>
+
+         <div class="login">
+              <h1>Login Form</h1>
+                 <form method="POST">
+                     {% csrf_token %}
+                 <div class="form-group ">
+                     <label ><b>username</b></label>
+                     <input type="text" name="username" class="form-control">
+               
+              </div>
+              <div class="form-group">
+                <label><b>Password</b></label>
+                <input type="password" name="password"class="form-control" >
+              </div>
+              <button type="submit" class="btn btn-secondary ">Submit</button>
+        </form>       
     </div>
-    <div style="text-align:center;">
+    <div  style="text-align:center;">
         {% for message in messages %}
         <h4> {{message}}</h4>
         {% endfor %}
-    </div>
+    </div>      
+  
+      
+    </div>   
+</div>
+
 </body>
 </html>

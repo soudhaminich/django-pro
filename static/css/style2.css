@@ -1,0 +1,45 @@
+body{
+    background-image: url(https://64.media.tumblr.com/63a716f3f069d167b7ab648fa37ec57c/tumblr_p78ee6wach1w3xadbo1_500.jpg) ;
+}
+.right{
+    
+    color:black;
+    padding: 10px 30px 10px 20px;
+    background-image: url(http://test.ultralinx.co/wp-content/uploads/2020/02/41_4.jpg);
+    margin: 30px auto;
+    border-radius: 30px;
+    
+    float: right;
+}
+.left{
+    display: inline-block;
+    padding: 0px;
+    margin-top: 40px;
+    
+}
+h4{
+    margin-left: 40px;
+}
+.main{
+    padding: 0%;
+    margin-left: 300px;
+    display: inline-block;
+}
+
+input[type=text], select {
+    
+    
+     background-color:white;
+
+}
+input[type=email], select {
+    
+    
+     background-color:white;
+
+}
+input[type=password], select {
+    
+     background-color:white;
+
+}

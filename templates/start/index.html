@@ -4,39 +4,54 @@
 <head>
   <title>HOME PAGE</title>
   {% load static %}
-  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-  
-<style>
-ul {
-  list-style-type:square;
-  margin: 0;
-  padding:0;
-}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style3.css' %}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-li {
-  display:inline-block;
-  width:400px;
-}
-</style>
 </head>
 <body>
-<div>
+<div class="index">
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Home</a>
+    </li>
+    {% if user.is_authenticated %}
+    <li><br>
+      <h1>HEARTY WELCOME TO THIS WEBSITE </h1>
+      <br>
+       <h2><b>Hello, {{user.username}} You are sucessfully logged in</b></h2></li>
+    <li class="nav-item">
+      <a class="nav-link" href="accounts/logout">Logout</a>
+    </li>
+    
+      
+    
+     {% else %}
+    <li class="nav-item">
+      <a class="nav-link" href="accounts/register">Register</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="accounts/login" >Login</a>
+    </li>
+    {% endif %}
+  </ul>
 
-<ul>
-  <li><h3><a href="index.html">Home</a></h3></li>
+<!--<ul>
+  <li style="float: left;"><h3><a href="index.html">Home</a></h3></li>
 
   
-  {% if user.is_authenticated %}
-  <li><h2><b>Hello, {{user.username}} You are sucessfully logged in😀😀</b></h1></li>
-  <li><h3><a href="accounts/logout">Logout</a></h3></li>
-  <h1>HEARTY WELCOME TO THIS WEBSITE</h1>
   
-  {% else %}
+ <li><h3><a href="accounts/logout">Logout</a></h3></li>
+  <h2><b>Hello, {{user.username}} You are sucessfully logged in</b></h1></li>
+
+    <h1>HEARTY WELCOME TO THIS WEBSITE</h1>
+   
   <li><h3><a href="accounts/register">Register</a></h3></li>
   <li><h3><a href="accounts/login">Login</a></h3></li>
-  {% endif %}
-  
-</ul>
+ 
+</ul>-->
 </div>
+
+
+
 </body>
 </html>
