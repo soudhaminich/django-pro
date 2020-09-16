@@ -9,7 +9,7 @@ body{
     margin: 30px auto;
     border-radius: 30px;
     
-    float: right;
+    float: left;
 }
 .left{
     display: inline-block;
